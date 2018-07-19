@@ -8,7 +8,7 @@ For how-to questions and other non-issues, please use [StackOverflow](https://st
 ## How to fix a class names conflict in production?
 
 This is probably the n°1 issue people are facing starting with Material-UI.
-The class names value relies on the concept of [class name generator](/customization/css-in-js#creategenerateclassname-options-class-name-generator).
+The class names value relies on the concept of [class name generator](/docs/src/pages/customization/css-in-js/css-in-js.md#creategenerateclassnameoptions--class-name-generator).
 The whole page needs to be rendered with **one generator**.
 You might end up using two class name generators in a variety of contexts:
 - You **bundle** two versions of Material-UI. You might have a dependency not correctly setting Material-UI as a peer dependency.
@@ -16,7 +16,7 @@ Each version of Material-UI uses its own default class name generator.
 - You are using `JssProvider` for a **subset** of your React Tree.
 Material-UI has a default class name generator, `JssProvider` is providing a second one.
 
-It's simple to recover from this problem. Use the [`JssProvider`](/customization/css-in-js#jssprovider) component at the top of your React tree to inject a single class name generator.
+It's simple to recover from this problem. Use the [`JssProvider`](/docs/src/pages/customization/css-in-js/css-in-js.md#jssprovider) component at the top of your React tree to inject a single class name generator.
 
 ## Why do the fixed positioned elements move when a modal is opened?
 
@@ -42,7 +42,7 @@ It's highly recommended:
 
 However perhaps you're adding some Material-UI components to an app that already uses another styling solution,
 or are already familiar with a different API, and don't want to learn a new one? In that case, head over to the
-[Style Library Interoperability](/guides/interoperability) section,
+[Style Library Interoperability](/docs/src/pages/guides/interoperability/interoperability.md) section,
 where we show how simple it is to restyle Material-UI components with alternative style libraries.
 
 ## When should I use inline-style vs classes?
@@ -56,7 +56,7 @@ As a rule of thumb, only use inline-style for dynamic style properties. The CSS 
 
 ## How do I use react-router?
 
-We have documented how to use a [third-party routing library](/demos/buttons#third-party-routing-library) with the `ButtonBase` component.
+We have documented how to use a [third-party routing library](/docs/src/pages/demos/buttons/buttons.md#third-party-routing-library) with the `ButtonBase` component.
 A lot of our interactive components use it internally:
 `Button`, `MenuItem`, `<ListItem button />`, `Tab`, etc.
 You can use the same solution with them.
@@ -90,13 +90,13 @@ export default withTheme()(withStyles(styles)(Modal));
 
 ## How can I access the DOM element?
 
-Wrap the component with the [`<RootRef>`](/api/root-ref) helper.
+Wrap the component with the [`<RootRef>`](/pages/api/root-ref.md) helper.
 
 ## Why are the colors I am seeing different from what I see here?
 
 The documentation site is using a custom theme. Hence, the color palette is
 different from the default theme that Material-UI ships. Please refer to [this
-page](/customization/themes) to learn about theme customization.
+page](/docs/src/pages/customization/themes/themes.md) to learn about theme customization.
 
 ## Material-UI is awesome. How can I support the project?
 
